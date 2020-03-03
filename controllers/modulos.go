@@ -5,13 +5,13 @@ import (
 	"net/http"
 )
 
-// HomePage ...
-func HomePage(w http.ResponseWriter, r *http.Request) {
-	t, err := template.ParseFiles("public/views/home.html", "public/views/index.html")
+// Modulos ...
+func Modulos(w http.ResponseWriter, r *http.Request) {
+	t, err := template.ParseFiles("public/views/modulos/modulos.html", "public/views/index.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	active := "home"
+	active := "modulos"
 	_ = t.ExecuteTemplate(w, "layout", active)
 }

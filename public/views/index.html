@@ -68,7 +68,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="/" class="nav-link">
+                            <a href="/" class="nav-link {{if eq . "home"}}active{{end}}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Inicio
@@ -76,50 +76,34 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-cash-register"></i>
+                            <a href="/atencion" class="nav-link {{if eq . "atencion"}}active{{end}}">
+                                <i class="nav-icon fas fa-circle"></i>
                                 <p>
-                                    Opción 1
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#"
-                               class="nav-link">
-                                <i class="nav-icon fas fa-archive"></i>
-                                <p>
-                                    Opción 2
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fas fa-utensils nav-icon"></i>
-                                        <p>Opción 2.1</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fas fa-coffee nav-icon"></i>
-                                        <p>Opción 2.2</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-store-alt"></i>
-                                <p>
-                                    Opción 3
+                                    Atención
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
+                            <a href="/turnos" class="nav-link {{if eq . "turnos"}}active{{end}}">
+                                <i class="nav-icon fas fa-circle"></i>
                                 <p>
-                                    Opción 4
+                                    Turnos
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/modulos" class="nav-link {{if eq . "modulos"}}active{{end}}">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <p>
+                                    Módulos
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/tramites" class="nav-link {{if eq . "tramites"}}active{{end}}">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <p>
+                                    Trámites
                                 </p>
                             </a>
                         </li>
