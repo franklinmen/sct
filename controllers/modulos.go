@@ -5,6 +5,10 @@ import (
 	"net/http"
 )
 
+type DataModulos struct {
+	Active string
+}
+
 // Modulos ...
 func Modulos(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("public/views/modulos/modulos.html", "public/views/index.html")
@@ -12,6 +16,8 @@ func Modulos(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	active := "modulos"
-	_ = t.ExecuteTemplate(w, "layout", active)
+	modulos := &DataModulos{
+		Active: "modulos",
+	}
+	_ = t.ExecuteTemplate(w, "layout", modulos)
 }

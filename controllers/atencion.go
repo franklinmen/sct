@@ -5,6 +5,10 @@ import (
 	"net/http"
 )
 
+type DataAtencion struct {
+	Active string
+}
+
 // Atencion ...
 func Atencion(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("public/views/atencion/atencion.html", "public/views/index.html")
@@ -12,6 +16,8 @@ func Atencion(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	active := "atencion"
-	_ = t.ExecuteTemplate(w, "layout", active)
+	atencion := &DataAtencion{
+		Active: "atencion",
+	}
+	_ = t.ExecuteTemplate(w, "layout", atencion)
 }

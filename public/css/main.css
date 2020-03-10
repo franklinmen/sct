@@ -1,0 +1,8 @@
+.c-buttons {
+    padding-top: 2em;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th{
+    vertical-align: middle;
+}

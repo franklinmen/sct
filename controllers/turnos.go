@@ -5,6 +5,10 @@ import (
 	"net/http"
 )
 
+type DataTurnos struct {
+	Active string
+}
+
 // Turnos ...
 func Turnos(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles("public/views/turnos/turnos.html", "public/views/index.html")
@@ -12,6 +16,8 @@ func Turnos(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	active := "turnos"
-	_ = t.ExecuteTemplate(w, "layout", active)
+	turnos := &DataTurnos{
+		Active: "string",
+	}
+	_ = t.ExecuteTemplate(w, "layout", turnos)
 }

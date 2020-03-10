@@ -1,140 +1,96 @@
 {{define "title"}} Atención {{end}}
 
+{{define "styles"}}
+{{end}}
+
 {{define "body"}}
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Atención</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active">Atención</li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
-              <!--  El diseño va aquí  -->
-        
-        <div class="col-md-12">
-            <div class="card card-primary">
-              
-              <div class="card-body">
-                
-                <div class="row">
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label>Turno Actual</label>
-                        <input type="text" class="form-control" placeholder=" A4 ">
-                      </div>
-                    </div>
-                    
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label>Estado Turno Actual</label>
-                        <input type="text" class="form-control" placeholder=" Atendiento ">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Tiempo de Atencion:</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="far fa-clock"></i></span>
-                          </div>
-                          <input type="text" class="form-control float-right" id="reservationtime" placeholder=" 00:00 ">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label>Turnos Esperas</label>
-                        <input type="text" class="form-control" placeholder=" 12 ">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Tiempo de Espera:</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="far fa-clock"></i></span>
-                          </div>
-                          <input type="text" class="form-control float-right" id="reservationtime" placeholder=" 00:00 ">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label>Turnos Atendidos</label>
-                        <input type="text" class="form-control" placeholder=" 10 ">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Promedio:</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="far fa-clock"></i></span>
-                          </div>
-                          <input type="text" class="form-control float-right" id="reservationtime" placeholder=" 00:00 ">
-                        </div>
-                      </div>
-                  </div>
-               
-
-            </div>
+        <!--  El diseño va aquí  -->
+        <section class="content">
             <div class="row">
-                <div class="col-sm-3">
-                  <div class="form-group">
-                    <td>
-                        <button type="button" class="btn btn-block btn-outline-success">Siguiente</button>
-                    </td>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <td>
-                            <button type="button" class="btn btn-block btn-outline-danger">Finalizas</button>
-                        </td>
+                <div class="col-12 mt-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Atención</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-lg-6">
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="turno-actual">Turno Actual</label>
+                                            <input id="turno-actual" type="text" class="form-control" placeholder="A1">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label for="estado-turno-actual">Estado Turno Actual</label>
+                                            <input id="estado-turno-actual" type="text" class="form-control" placeholder="Atendiendo">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="tiempo-atencion">Tiempo de Atención</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                </div>
+                                                <input id="tiempo-atencion" type="text" class="form-control" placeholder="00:00">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label for="turno-espera">Turnos en Espera</label>
+                                            <input id="turno-espera" type="text" class="form-control" placeholder="15">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="tiempo-espera">Tiempo de Espera</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                </div>
+                                                <input id="tiempo-espera" type="text" class="form-control" placeholder="00:00">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-6">
+                                            <label for="turnos-atendidos">Turnos Atendidos</label>
+                                            <input id="turnos-atendidos" type="text" class="form-control" placeholder="10">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="promedio">Promedio</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                </div>
+                                                <input id="promedio" type="text" class="form-control" placeholder="00:00">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-lg-6">
+                                    <div class="row c-buttons">
+                                        <div class="col-6">
+                                            <a href="/test" id="btn-siguiente" class="btn btn-block btn-outline-primary">SIGUIENTE</a>
+                                            <button type="button" id="btn-llamar" class="btn btn-block btn-outline-info">LLAMAR</button>
+                                            <button type="button" id="btn-atender" class="btn btn-block btn-outline-success">ATENDER</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="button" id="btn-finalizar" class="btn btn-block btn-outline-danger">FINALIZAR</button>
+                                            <button type="button" id="btn-transferir" class="btn btn-block btn-outline-warning">TRANSFERIR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="form-group">
-                    <td>
-                        <button type="button" class="btn btn-block btn-outline-info">Llamar</button>
-                    </td>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <td>
-                            <button type="button" class="btn btn-block btn-outline-warning">Transferir</button>
-                        </td>
-                    </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="form-group">
-                    <td>
-                        <button type="button" class="btn btn-block btn-outline-success">Atender</button>
-                    </td>
-                  </div>
                 </div>
             </div>
-        </div>
-  
+        </section>
     </div>
+{{end}}
+
+{{define "scripts"}}
+    <script type="module" src="/public/js/alerts/notifications.js"></script>
+    <script type="module" src="/public/js/requests/atencion.js"></script>
 {{end}}

@@ -1,0 +1,53 @@
+{{define "title"}} Nuevo Trámite {{end}}
+
+{{define "styles"}}
+    <link rel="stylesheet" href="/public/css/checkbox.css">
+{{end}}
+
+{{define "body"}}
+    <div class="content-wrapper">
+        <!--  El diseño va aquí  -->
+        <section class="content">
+            <div class="row">
+                <div class="col mt-4">
+                    <div class="card mx-auto w-75">
+                        <div class="card-header">
+                            <h3>Nuevo Trámite</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="form-nuevo-tramite" action="/tramites/nuevo" method="post" role="form">
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required>
+                                    </div>
+                                    <div class="form-group col">
+                                        <label for="iniciales">Iniciales</label>
+                                        <input type="text" id="iniciales" name="iniciales" class="form-control" placeholder="Iniciales" minlength="2" maxlength="2" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="tercera-edad" name="tercera_edad">
+                                        <label for="tercera-edad" class="custom-control-label">Tercera Edad</label>
+                                    </div>
+                                </div>
+                                <button id="btn-guardar-tramite" class="btn btn-primary" type="submit">
+                                    <span class="guardar">GUARDAR</span>
+                                    <span class="cargando d-none">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Loading...
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{{end}}
+
+{{define "scripts"}}
+    <script type="module" src="/public/js/requests/tramites.js"></script>
+{{end}}

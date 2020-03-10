@@ -9,4 +9,20 @@ $(document).ready(function () {
             localStorage.setItem('sc', 'sidebar-collapse');
         }
     });
+    $('#modulos').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+    });
+    // $('#lista-tramites').DataTable({
+    //     "paging": true,
+    //     "lengthChange": true,
+    //     "searching": true,
+    //     "ordering": true,
+    //     "info": true,
+    //     "autoWidth": true,
+    // });
 });
